@@ -13,7 +13,7 @@ USER root
 RUN apt update
 RUN apt install zlib1g-dev libsqlite3-dev libpng-dev pkg-config libmagickwand-dev python python-pip
 RUN docker-php-ext-install zip gd pcntl pdo_mysql exif sockets
-RUN pecl install imagick
+RUN pecl install imagick mongodb
 RUN docker-php-ext-enable imagick
 RUN pip install awscli awsebcli
 
