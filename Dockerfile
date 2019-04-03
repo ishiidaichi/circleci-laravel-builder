@@ -4,7 +4,7 @@
 #--------------------------------------------------------------------------
 #
 
-FROM circleci/php:7.1-node-browsers
+FROM circleci/php:7.1-stretch-node-browsers
 
 MAINTAINER Daichi Ishii <me@ishiidaichi.com>
 
