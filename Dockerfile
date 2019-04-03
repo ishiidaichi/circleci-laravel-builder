@@ -4,14 +4,14 @@
 #--------------------------------------------------------------------------
 #
 
-FROM circleci/php:7.1-node-browsers
+FROM circleci/php:7.1-stretch-node-browsers
 
 MAINTAINER Daichi Ishii <me@ishiidaichi.com>
 
 USER root
 
 RUN apt update
-RUN apt install zlib1g-dev libsqlite3-dev libpng-dev pkg-config libmagickwand-dev python python-pip
+RUN apt install zlib1g-dev libsqlite3-dev libpng-dev pkg-config libmagickwand-dev python python-pip libssl-dev
 RUN docker-php-ext-install zip gd pcntl pdo_mysql exif sockets
 RUN pecl install imagick mongodb
 RUN docker-php-ext-enable imagick mongodb
